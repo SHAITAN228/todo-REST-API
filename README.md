@@ -16,6 +16,55 @@
 
 ## Установка приложения
 
+**Выберите нужну директорию и клонируйте репозиторий с помощью команды**
+
+   ```sh
+   git clone https://github.com/SHAITAN228/todo-REST-API.git
+   ```
+**Перед сборкой приложения измените параметры подключения к базе данных в файле `config.json`**
+
+
+**Далее необходимо собрать приложение с промощью следующей команды**
+
+   ```sh
+   docker-compose up --build
+   ```
+
+**Приложение запущено и готово к работе.** 
+
+**Доступ осуществляется по адресу: `http://localhost:8080`**
+
+
+## Примеры запросов
+
+
+### Создание новой записи
+```sh
+curl -X POST -H "Content-Type: application/json" -d "{\"title\":\"Первая задача\",\"content\":\"Описание задачи\",\"completed\":false}" http://localhost:8080/tasks
+```
+
+
+### Изменение существующей записи
+```sh
+curl -X PUT -H "Content-Type: application/json" -d "{\"title\":\"Обновленная задача\",\"content\":\"Измененное описание\",\"completed\":true}" http://localhost:8000/tasks/123
+```
+
+### Получение списка всех задач
+```sh
+curl -X GET http://localhost:8080/tasks
+```
+
+
+### Получение задачи по ID
+```sh
+curl -X GET http://localhost:8080/tasks/1
+```
+
+### Удаление задачи по ID
+
+```sh
+curl -X DELETE http://localhost:8080/tasks/1
+```
 
 
 
