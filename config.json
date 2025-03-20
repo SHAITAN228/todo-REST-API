@@ -1,0 +1,8 @@
+{
+    "host": "158.160.143.102",
+    "port": 4032,
+    "dbname": "todoDB",
+    "user": "postgres",
+    "password": "bee228",
+    "sslmode": "disable"
+  }
